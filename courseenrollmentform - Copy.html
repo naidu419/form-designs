@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Enrollment Form</title>
+    <style>
+        body {
+            background-color: rgb(49, 240, 240);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: rgb(73, 41, 134);
+        }
+        form {
+            width: 420px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        fieldset {
+            border: none;
+            margin: 0 0 18px 0;
+            padding: 0;
+        }
+        legend {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        label {
+            font-size: 20px;
+            color: rgb(91, 2, 58);
+            margin-bottom: 4px;
+            display: block;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 7px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .gender-group label {
+            display: inline-block;
+            font-size: 18px;
+            margin-right: 18px;
+            color: #2d2d2d;
+        }
+        .subject-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 7px;
+        }
+        .subject-java { color: #e67e22; font-size: 18px; }
+        .subject-python { color: #27ae60; font-size: 18px; }
+        .subject-dsa { color: #2980b9; font-size: 18px; }
+        .subject-web { color: #8e44ad; font-size: 18px; }
+        .subject-data { color: #c0392b; font-size: 18px; }
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .note {
+            text-align: center;
+            font-size: 1.1em;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>COURSE ENROLLMENT FORM</h1>
+    <form>
+        <fieldset>
+            <label for="name">STUDENT NAME:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </fieldset>
+        <fieldset>
+            <label for="roll">ROLL NO:</label>
+            <input type="text" id="roll" name="roll" placeholder="Enter Roll Number" required>
+        </fieldset>
+        <fieldset>
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </fieldset>
+        <fieldset>
+            <legend>GENDER:</legend>
+            <span class="gender-group">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male" style="display:inline;">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female" style="display:inline;">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other" style="display:inline;">Other</label>
+            </span>
+        </fieldset>
+        <fieldset>
+            <label for="year">YEAR/SEMESTER:</label>
+            <select id="year" name="year" required>
+                <option value="">Select</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>COURSES:</legend>
+            <span class="subject-row">
+                <input type="checkbox" id="course1" name="courses" value="JAVA">
+                <label for="course1" class="subject-java" style="display:inline;margin-left:6px;">JAVA</label>
+            </span>
+            <span class="subject-row">
+                <input type="checkbox" id="course2" name="courses" value="PYTHON">
+                <label for="course2" class="subject-python" style="display:inline;margin-left:6px;">PYTHON</label>
+            </span>
+            <span class="subject-row">
+                <input type="checkbox" id="course3" name="courses" value="DSA">
+                <label for="course3" class="subject-dsa" style="display:inline;margin-left:6px;">DSA</label>
+            </span>
+            <span class="subject-row">
+                <input type="checkbox" id="course4" name="courses" value="WEB DEVELOPMENT">
+                <label for="course4" class="subject-web" style="display:inline;margin-left:6px;">WEB DEVELOPMENT</label>
+            </span>
+            <span class="subject-row">
+                <input type="checkbox" id="course5" name="courses" value="DATA ENGINEERING">
+                <label for="course5" class="subject-data" style="display:inline;margin-left:6px;">DATA ENGINEERING</label>
+            </span>
+        </fieldset>
+        <fieldset>
+            <label for="address">ADDRESS:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+        </fieldset>
+        <span class="form-actions">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </span>
+        <p class="note">
+            Note: Fill in all details
+        </p>
+    </form>
+</body>
+</html>

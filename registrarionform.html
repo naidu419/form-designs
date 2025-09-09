@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration form</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: blue(8, 112, 164);
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(75, 114, 183);
+    }  
+
+    form {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 6px;
+        border-radius: 4px;
+        border: 1px solid #761515;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .submit-button {
+        margin-top: 20px;
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        color: rgb(5, 125, 195);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 30%;
+        display: block;
+        font-size: 19px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .submit-button:hover {
+        background-color: #45a049;
+    }
+
+    .inline-label {
+        display: inline-block;
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form action="login.html" method="get">
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces">
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" required min="19" max="25" title="Age should be between 19 and 25 years">
+
+    <label for="DOB">Date of Birth:</label>
+    <input type="date" name="DOB" id="DOB">
+
+    <label>Gender:</label>
+    <label class="inline-label"><input type="radio" name="Gender" value="Male"> Male</label>
+    <label class="inline-label"><input type="radio" name="Gender" value="Female"> Female</label>
+
+    <label for="reason">Section:</label>
+    <select id="reason" name="reason" required>
+        <option value="DS-1">DS</option>
+        <option value="DS-2">CS</option>
+        <option value="DS-3">AIML</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd" required>
+
+    <label for="confirm-pwd">Confirm Password:</label>
+    <input type="password" id="confirm-pwd" name="confirm_pwd" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number should be 10 digits long">
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required placeholder="Enter your address"></textarea>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required pattern="[A-Za-z\s]+" title="City should only contain letters and spaces">
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required pattern="[A-Za-z\s]+" title="State should only contain letters and spaces">
+
+    <label>Fee Status:</label>
+    <label class="inline-label"><input type="radio" name="fee_status" value="Paid"> Paid</label>
+    <label class="inline-label"><input type="radio" name="fee_status" value="Not Paid"> Not Paid</label>
+
+    <button type="submit" class="submit-button">Submit</button>
+</form>
+
+</body>
+</html>
