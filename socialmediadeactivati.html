@@ -1,0 +1,46 @@
+<htmL>
+    <head>
+        <title></title>
+        <style>
+            h1{
+                text-align: center;
+                background-color: rgba(17, 214, 214, 0.722);
+            }
+            form{
+                position: absolute;
+                background-color: rgb(102, 170, 105);
+                width:35%;
+                left:35%;
+            }
+            #submit{
+                background-color: rgb(168, 147, 93);
+                color: white;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <h1>Request Social Media Deactivation </h1>
+        <form action="">
+        <fieldset>
+        <legend>Deactivation Form:</legend>
+        <label for="name">Your Name</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="text">Select Platform to Deactivate</label><br>
+        <select>
+            <option>NTR JR</option>
+            <option>NTR SR</option>
+            <option>NBK</option>
+            <option>NKR</option>
+        </select><br>
+        <label for="reason">Reason for Deactivate</label><br>
+        <textarea name="reason" id="reason" cols="30" rows="10"></textarea><br><br>
+        <label for="submit">I confirm that I want to deactivate my account</label><br><br>
+        <input type="submit" value="Submit Deactivation Request" id="submit">
+        </fieldset>
+        </form> 
+        </body>
+</htmL>

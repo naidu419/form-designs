@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>servay Form</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin:20px;
+        }
+        h1{
+            text-align: center;
+            color: rgb(208, 101, 7);
+        }
+        h2{
+            text-align: center;
+            color: rgb(137, 137, 11);
+        }
+        p{
+            text-align: center;
+        }
+        form{
+            background: #fcf8f8;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+        label{
+            margin-top: 15px;
+            display: block;
+            margin-top: 15px;
+        }
+        input, select{
+            width:100%;
+            padding:8px;
+            margin-top: 5px;
+            border: 1px solid #365e39;
+            border-radius: 4px;
+        }
+        .address{
+            gap:100px;
+        }
+        button{
+            margin-top: 20px;
+            width: 100px;
+            padding: 10px;
+            border:none;
+            border-radius: 7px;
+            background: #4caf4c;
+            color:white;
+            font-size:16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SERVAY FORM</h1>
+    <h2>Student Datails</h2>
+
+    <p>When you submit this from,it will collect your details like name and email address unless you provide it your self.</p>
+    
+    <form>  
+        <label for="year"><b>1. Year</b></label><br>
+        <select id="year" required>
+           <option value="">Select Year</option>
+           <option>I Year</option>
+           <option>II Year</option>
+           <option>III Year</option>
+           <option>IV Year</option>
+        </select>
+
+        <label for="semester"><b>2. Semester</b></label><br>
+        <select id="semester" required>
+            <option value="">Select Semester</option>
+            <option>III Semester</option>
+            <option>IV Semester</option>
+            <option>V Semester</option>
+            <option>VI Semester</option>
+            <option>VII Semester</option>
+        </select>
+
+         <label for="department"><b>3. Department</b></label><br>
+          <select id="department" required>
+             <option value="">Select Department</option>
+             <option>Data Science</option>
+             <option>Cyber Security</option>
+             <option>Information Technology</option>
+          </select>
+
+
+            <label class="Roll"><b>4. Roll Number</b></label><br>
+            <input type="text" id="Roll" name="Roll" placeholder="Enter Roll Number" required ><br>
+      
+            <label class="name"><b>5.Name of the Student</b></label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required><br>
+       
+            <label for="section"><b>6.Section</b></label><br>
+            <input type="text" id="section" name="section" placeholder="Enter your answer"><br>
+        
+            <label for="mobile"><b>7.Student Mobile NO</b></label><br>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your answer"><br>
+        
+            <label for="mobile"><b>8.Fathers Mobile NO</b></label><br>
+            <input type="id" id="mobile" name="mobile" placeholder="Enter your answer"><br>
+        
+            <label for="text"><b>9.Village</b></label><br>
+            <input type="text" id="text" name="text" placeholder="Enter your answer"><br>
+     
+            <label for="text"><b>10.District</b></label><br>
+            <input type="text" id="text" name="text" placeholder="Enter your answer"><br>
+
+            <label for="text"><b>11.State</b></label><br>
+            <input type="text" id="text" name="text" placeholder="Enter your answer"><br>
+        
+            <label for="text"><b>12.Pincode</b></label><br>
+            <input type="id" id="text" name="text" placeholder="Enter your answer"><br>
+       
+            <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
